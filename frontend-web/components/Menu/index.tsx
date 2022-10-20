@@ -32,13 +32,13 @@ function Menu({ isOpen, onClick }: Props) {
       initial={{ x: 500 }}
       animate={{ x: isOpen ? 0 : 1000 }}
       transition={{ duration: 1.5 }}
-      className="fixed h-screen bg-primary right-0 top-0 w-full md:w-[40%] flex flex-col pl-12">
+      className="fixed h-screen bg-primary right-0 top-0 w-full md:w-[40%] flex flex-col pl-12 z-20">
       <div className="absolute top-7 right-10">
         <button onClick={onClick}>
           <GrClose />
         </button>
       </div>
-      <div className="pt-[40%]">
+      <div className="pt-[40%] lg:flex justify-evenly lg:-ml-24">
         <div>
           <h3 className="text-sm xl:text-xl text-light mb-5">Social</h3>
           <ul className="flex items-center xl:items-start xl:flex-col text-sm gap-2">
@@ -53,7 +53,7 @@ function Menu({ isOpen, onClick }: Props) {
                     bgColor="transparent"
                     style={{ width: '40px', height: '40px' }}
                   />
-                  <p className="hidden lg:block lg:text-bold text-dark xl:ml-5 capitalize">
+                  <p className="hidden lg:block lg:font-bold text-dark xl:ml-5 capitalize">
                     {social.title}
                   </p>
                 </li>
@@ -61,9 +61,9 @@ function Menu({ isOpen, onClick }: Props) {
             ))}
           </ul>
         </div>
-        <div className="mt-10">
+        <div className="mt-10 lg:mt-0">
           <h3 className="text-sm xl:text-xl text-light mb-5">Menu</h3>
-          <ul className="gap-3 flex flex-col text-semibold xl:text-bold text-dark">
+          <ul className="gap-3 flex flex-col font-semibold xl:text-bold xl:text-4xl text-dark xl:gap-6 lg:mt-7">
             <li>Home</li>
             <li>Featured</li>
             <li>Projects</li>
