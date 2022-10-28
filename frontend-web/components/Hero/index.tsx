@@ -1,20 +1,23 @@
 import Image from 'next/image';
 import React from 'react';
+import Button from '../Button';
 
 type Props = {};
 
 function Hero({}: Props) {
+  const handleClick = (e: { preventDefault: () => void }) => {
+    e.preventDefault();
+    console.log('hero button');
+  };
   return (
-    <div className="h-screen flex flex-col md:flex-row justify-center item-center">
+    <div className="h-screen flex flex-col md:flex-row justify-center item-center gap-10">
       <div
         id="left"
         className="flex flex-col justify-center items-center text-center">
         <h1 className="capitalize text-4xl md:text-4">
           we help you build your dream house
         </h1>
-        <button className="bg-primary px-7 py-3 outline mt-10 rounded-md font-bold">
-          Start Now
-        </button>
+        <Button title="Start Now" onClick={handleClick} />
       </div>
       <div
         id="right"
