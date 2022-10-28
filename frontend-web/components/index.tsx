@@ -1,7 +1,6 @@
-import Navbar from './Navbar';
-import Menu from './Menu';
-import Hero from './Hero';
-import Projects from './Projects';
-import Button from './Button';
-
-export { Navbar, Menu, Hero, Projects, Button };
+export { default as Navbar } from './Navbar';
+export { default as Menu } from './Menu';
+export { default as Hero } from './Hero';
+export { default as Projects } from './Projects';
+export { default as Button } from './Button';
+export { default as Footer } from './Footer';

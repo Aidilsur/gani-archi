@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Menu, Navbar } from '../components';
+import { Footer, Menu, Navbar } from '../components';
 
 type Props = { children: JSX.Element };
 
@@ -13,6 +13,7 @@ function Layout({ children }: Props) {
       <Navbar onClick={handleMenu} />
       <Menu isOpen={isOpen} onClick={handleMenu} />
       <main className="max-w-[1336px] mx-auto">{children}</main>
+      <Footer />
     </>
   );
 }

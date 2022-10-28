@@ -43,7 +43,7 @@ function Projects({}: Props) {
       <h3 className="text-lg font-semibold tracking-[10px] uppercase">
         Projects
       </h3>
-      <div className="flex gap-8 relative">
+      <div className="flex flex-col md:flex-row gap-2 xl:gap-8 relative">
         {items.map((item, index) => {
           const text = item.text.replace(' ', '_').toLowerCase();
           return (
